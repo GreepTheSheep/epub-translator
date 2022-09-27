@@ -199,10 +199,10 @@ class EPubTranslatorServiceImpl(private val translator: Translator, private val 
         firstNode.parentNode.insertBefore(translatedTextContainerDiv, firstNode)
         val originalTextContainerDiv = document.createElement("div")
         translatedTextContainerDiv.parentNode.insertBefore(originalTextContainerDiv, translatedTextContainerDiv)
-        val targetNodes = translationRequest.target
-        for (targetNode in targetNodes) {
-            originalTextContainerDiv.appendChild(targetNode)
-        }
+        // val targetNodes = translationRequest.target
+        // for (targetNode in targetNodes) {
+            // originalTextContainerDiv.appendChild(targetNode)
+        // }
     }
 
     private fun preProcessNode(node: Node) {
